@@ -8,5 +8,5 @@ There are several basic techniques to implement IoC: [(_Illustrating images_)](h
 + ...
 
 ## 2. Bean
-
+## 3. Transaction Manager
 
