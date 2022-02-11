@@ -10,3 +10,9 @@ There are several basic techniques to implement IoC: [(_Illustrating images_)](h
 ## 2. Bean
 ## 3. Transaction Manager
 
+#### Transaction characteristics
+
++ Atomicity: A transaction must be a unit that should either succeed or fail
++ Consistency: 
++ Isolation:
++ Durability: 
