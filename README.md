@@ -16,3 +16,8 @@ There are several basic techniques to implement IoC: [(_Illustrating images_)](h
 + Consistency: 
 + Isolation:
 + Durability: 
+
+#### How does @Transactional work ?
+#### Propagation
+
+
