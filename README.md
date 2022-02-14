@@ -18,6 +18,12 @@ There are several basic techniques to implement IoC: [(_Illustrating images_)](h
 + Durability: 
 
 #### How does @Transactional work ?
-#### Propagation
+<details>
+<summary><b><u>Propagation</u></b></summary>
 
-
++ REQUIRED: The REQUIRED propagation is default mode.
++ SUPPORTS: If a transaction exists, then the existing transaction will be used. If there isn't a transaction, it is executed non-transactional.
++ MANDATORY: If there is an active transaction, then it will be used. If there isn't an active transaction, then Spring throws an IllegalTransactionStateException exception.
++ NEVER: Spring throws an exception if there's an active transaction.
++ 
+</details>
