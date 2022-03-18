@@ -30,5 +30,5 @@ There are several basic techniques to implement IoC: [(_Illustrating images_)](h
 
 ## 4. BeanFactory vs ApplicationContext
 
-The `BeanFactory` provides the configuration framework and basic functionality
-The `ApplicationContext` extends the `BeanFactory` and provides more functoions for enterprise-specific functionality.
++ The `BeanFactory` provides the configuration framework and basic functionality
++ The `ApplicationContext` extends the `BeanFactory` and provides more functoions for enterprise-specific functionality.
