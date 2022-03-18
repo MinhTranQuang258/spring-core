@@ -27,3 +27,8 @@ There are several basic techniques to implement IoC: [(_Illustrating images_)](h
 + NEVER: Spring throws an exception if there's an active transaction.
 + 
 </details>
+
+## 4. BeanFactory vs ApplicationContext
+
+The `BeanFactory` provides the configuration framework and basic functionality
+The `ApplicationContext` extends the `BeanFactory` and provides more functoions for enterprise-specific functionality.
