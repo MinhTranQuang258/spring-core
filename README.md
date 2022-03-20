@@ -64,8 +64,8 @@ There are several basic techniques to implement IoC: [(_Illustrating images_)](h
   }
   ```
   
-This is where the magic comes in: 
-All @Configuration classes are subclassed at startup-time with `CGLIB`. the child method checks the container first for any cached (scoped) beans before it creates a new instance.
+This is where the magic comes in: <br/>
+All @Configuration classes are subclassed at startup-time with `CGLIB`. The child method checks the container first for any cached (scoped) beans before it creates a new instance.
 
 </details>
 
