@@ -32,8 +32,9 @@ There are several basic techniques to implement IoC: [(_Illustrating images_)](h
 
 + The `BeanFactory` provides the configuration framework and basic functionality
 + The `ApplicationContext` extends the `BeanFactory` and provides more functoions for enterprise-specific functionality.
+## 5. Understanding AOP Proxies
 
-## 5. Other 
+## 6. Other 
 
 #### How Java-based Configuration (@Configuration) Works Internally
 <details>
