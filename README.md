@@ -28,6 +28,8 @@ There are several basic techniques to implement IoC: [(_Illustrating images_)](h
 + 
 </details>
 
+**NOTE**: `@Transactional` will have no effect if used to annotate private, protected, default methods. The proxy generator will ignore them.
+
 ## 4. BeanFactory vs ApplicationContext
 
 + The `BeanFactory` provides the configuration framework and basic functionality
