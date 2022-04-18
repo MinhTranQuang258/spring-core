@@ -95,10 +95,8 @@ There are several basic techniques to implement IoC: [(_Illustrating images_)](h
   
   Ref: https://docs.spring.io/spring-framework/docs/3.2.x/spring-framework-reference/html/aop.html
   
+  Ref: https://jenkov.com/tutorials/java-reflection/dynamic-proxies.html
 </details>
-
-
-
 
 ## 6. Other 
 
