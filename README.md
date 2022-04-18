@@ -36,6 +36,70 @@ There are several basic techniques to implement IoC: [(_Illustrating images_)](h
 + The `ApplicationContext` extends the `BeanFactory` and provides more functoions for enterprise-specific functionality.
 ## 5. Understanding AOP Proxies
 
+<details>
+<summary>Understanding</summary>
+
+  Let's come up with a sample to clearly understand what a the AOP proxies is
+  
+  Consider first the scenario have a un-proxied, nothing-special-about-it, straight object reference:
+  
+  ```
+  public class SimplePojo implements Pojo {
+
+     public void foo() {
+        // this next method invocation is a direct
+        call on the 'this' reference
+        this.bar();
+     }
+
+     public void bar() {
+        // some logic...
+     }
+  }
+  ```
+  ```
+  public class Main {
+
+     public static void main(String[] args) {
+
+        Pojo pojo = new SimplePojo();
+
+        // this is a direct method call on the 'pojo' reference
+        pojo.foo();
+     }
+  }
+  ```
+  When the reference (`pojo`) that client code has is a proxy
+  ```
+  public class Main {
+
+     public static void main(String[] args) {
+
+        ProxyFactory factory = new ProxyFactory(new SimplePojo());
+        factory.addInterface(Pojo.class);
+        factory.addAdvice(new RetryAdvice());
+
+        Pojo pojo = (Pojo) factory.getProxy();
+
+        // this is a method call on the proxy!
+        pojo.foo();
+     }
+  }
+  ```
+  
+  The key thing to understand here is the `pojo` is a proxy instance, not a Pojo object. So when `pojo` invoke the `foo()` method, the proxy will be able to delegate to all of the interceptors (advice) that are relevant to that particular method call. 
+  
+  Interceptors may be used to log, do actions before and after the target method (`foo()`).
+  
+  However, once the call has finally reached the target object, the `SimplePojo` reference in this case, any method calls `this.` such as `this.bar()` or `this.foo()`,  are going to be invoked against the `this` reference, and not the _proxy_. In other word, in this case the `pojo` instance (`SimplePojo`) is being used, not a `pojo` proxy.
+  
+  Ref: https://docs.spring.io/spring-framework/docs/3.2.x/spring-framework-reference/html/aop.html
+  
+</details>
+
+
+
+
 ## 6. Other 
 
 #### How Java-based Configuration (@Configuration) Works Internally
