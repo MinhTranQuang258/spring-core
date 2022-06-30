@@ -17,7 +17,7 @@ There are several basic techniques to implement IoC: [(_Illustrating images_)](h
 
 </details>
 
-## Configuration priority
+## Configuration precedence
 <details>
 <summary>Overview</summary>
 
@@ -25,15 +25,21 @@ There are several basic techniques to implement IoC: [(_Illustrating images_)](h
 
 </details>
 <details>
-<summary>Explain</summary>
+<summary>Example</summary>
 
-+ 
-+ 
-+ 
-+ 
-+ 
-
++ <b>{specific-location}(s)</b>/<b>{application-name}-{profiles}(s).properties</b>
++ {specific-location}(s)/{application-name}-{profiles}(s).yml
++ {specific-location}(s)/{application-name}-{profiles}(s).yaml
++ {specific-location}(s)/application-{profiles}(s).properties
++ ...
++ file:./config/{application-name}-{profiles}(s).properties
++ ...
++ file:./config/application-{profiles}(s).properties
++ ...
++ {specific-location}(s)/{application-name}.properties
 </details>
+
+Ref: https://stackoverflow.com/questions/65286686/difference-between-classpath-some-packages-vs-file-some-url-when-configuring-s
 
 #### Transaction characteristics
 
