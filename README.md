@@ -9,6 +9,12 @@ There are several basic techniques to implement IoC: [(_Illustrating images_)](h
 
 ## Bean
 ## Transaction Manager
+## Bootstrap phases
+<summary>Overview</summary>
+
+
+
+</details>
 ## Configuration priority
 <details>
 <summary>Overview</summary>
