@@ -10,11 +10,13 @@ There are several basic techniques to implement IoC: [(_Illustrating images_)](h
 ## Bean
 ## Transaction Manager
 ## Bootstrap phases
+<details>
 <summary>Overview</summary>
 
-
+![](images/bootstrap.png)
 
 </details>
+
 ## Configuration priority
 <details>
 <summary>Overview</summary>
