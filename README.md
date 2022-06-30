@@ -1,5 +1,5 @@
 # Spring Core
-## 1. Inversion of Control
+## Inversion of Control
 [Inversion of control (IoC)](https://en.wikipedia.org/wiki/Inversion_of_control) is a programming _**principle**_. IoC inverts the flow of control as compared to traditional control flow. In IoC, custom-written portions of a computer program receive the control from a generic flow.
 
 There are several basic techniques to implement IoC: [(_Illustrating images_)](https://www.tutorialsteacher.com/Content/images/ioc/ioc-patterns.png)
@@ -7,8 +7,11 @@ There are several basic techniques to implement IoC: [(_Illustrating images_)](h
 + Template method design pattern
 + ...
 
-## 2. Bean
-## 3. Transaction Manager
+## Bean
+## Transaction Manager
+## Configuration priority
+
+
 
 #### Transaction characteristics
 
@@ -30,11 +33,11 @@ There are several basic techniques to implement IoC: [(_Illustrating images_)](h
 
 **NOTE**: `@Transactional` will have no effect if used to annotate private, protected, default methods. The proxy generator will ignore them.
 
-## 4. BeanFactory vs ApplicationContext
+## BeanFactory vs ApplicationContext
 
 + The `BeanFactory` provides the configuration framework and basic functionality
 + The `ApplicationContext` extends the `BeanFactory` and provides more functoions for enterprise-specific functionality.
-## 5. Understanding AOP Proxies
+## Understanding AOP Proxies
 
 <details>
 <summary>Understanding</summary>
@@ -98,7 +101,7 @@ There are several basic techniques to implement IoC: [(_Illustrating images_)](h
   Ref: https://jenkov.com/tutorials/java-reflection/dynamic-proxies.html
 </details>
 
-## 6. Other 
+## Other 
 
 #### How Java-based Configuration (@Configuration) Works Internally
 <details>
