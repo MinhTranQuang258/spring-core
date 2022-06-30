@@ -10,8 +10,22 @@ There are several basic techniques to implement IoC: [(_Illustrating images_)](h
 ## Bean
 ## Transaction Manager
 ## Configuration priority
+<details>
+<summary>Overview</summary>
 
+![](images/configuration_priority.png)
 
+</details>
+<details>
+<summary>Explain</summary>
+
++ 
++ 
++ 
++ 
++ 
+
+</details>
 
 #### Transaction characteristics
 
