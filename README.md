@@ -7,6 +7,16 @@ There are several basic techniques to implement IoC: [(_Illustrating images_)](h
 + Template method design pattern
 + ...
 
+## Spring Boot Layers
+<summary>Explain</summary>
+
+1. Presentation Layer – Authentication & Json Translation
+2. Business Layer – Business Logic, Validation & Authorization
+3. Persistence Layer – Storage Logic
+4. Database Layer – Actual Database
+
+</details>
+
 ## Bean
 ## Transaction Manager
 ## Bootstrap phases
