@@ -29,6 +29,8 @@ There are several basic techniques to implement IoC: [(_Illustrating images_)](h
 
 </details>
 
+## Validation
+
 ## Configuration precedence
 <details>
 <summary>Overview</summary>
