@@ -31,7 +31,11 @@ There are several basic techniques to implement IoC: [(_Illustrating images_)](h
 
 ## Validation
 
-### @Valid vs @Validated
+<details>
+  <summary>@Valid vs @Validated</summary>
+  </br>
+
+</details>
 
 ## Configuration precedence
 <details>
