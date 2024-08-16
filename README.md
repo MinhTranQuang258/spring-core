@@ -8,11 +8,20 @@ There are several basic techniques to implement IoC: [(_Illustrating images_)](h
 + ...
 
 <details>
+  <summary>Inversion of Control (IoC) vs Traditional Style</summary>
+  </br>
+
+  + In the traditional style of programming, a class typically creates its own dependencies. This leads to tightly coupled components and makes testing and maintenance difficult.
+
+  + In the IoC style, dependencies are injected into a class, promoting loose coupling and better testability.
+
+</details>
+
+<details>
   <summary>Dependency Injection (DI)</summary>
   </br>
 
   DI is a specific technique for achieving IoC. It involves providing dependencies to an object rather than creating them within the object itself. It's a common and popular implementation of the IoC principle.   
-
 
 </details>
 
