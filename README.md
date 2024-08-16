@@ -58,6 +58,28 @@ _IoC Approach with Dependency Injection_
       }
   }
   ```
+</details>
+
+<details>
+  <summary>Who is dependency in IoC example</summary>
+  </br>
+  
+```
+public class Car {
+    private Engine engine;
+
+    public Car(Engine engine) {
+        this.engine = engine;
+    }
+}
+```
+
+Consider a `Car` class. It depends on an `Engine` to function. Therefore, the `Engine` is a dependency of the `Car`.
+
++ The Car class is the dependent class.
++ The Engine class is the dependency.
+
+The key point in IoC is that the `Car` doesn't create the `Engine` itself; it's provided (_injected_) from an external source.
 
 </details>
 
