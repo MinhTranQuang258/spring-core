@@ -11,7 +11,8 @@ There are several basic techniques to implement IoC: [(_Illustrating images_)](h
   <summary>Dependency Injection (DI)</summary>
   </br>
 
-  DI is a specific technique for achieving IoC. It involves providing dependencies to an object rather than creating them within the object itself.
+  DI is a specific technique for achieving IoC. It involves providing dependencies to an object rather than creating them within the object itself. It's a common and popular implementation of the IoC principle.   
+
 
 </details>
 
