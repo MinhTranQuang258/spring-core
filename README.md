@@ -7,6 +7,43 @@ There are several basic techniques to implement IoC: [(_Illustrating images_)](h
 + Template method design pattern
 + ...
 
+<details>
+  <summary>Example</summary>
+  </br>
+  
+  Imagine a car. In a traditional approach, the car would create its own engine. But with IoC, the car doesn't create the engine; it's provided by an external entity (like a car factory). The car simply uses the engine when needed.
+
+_Tranditional Approach_
+  ```
+  public class Car {
+      private Engine engine;
+  
+      public Car() {
+          engine = new Engine();
+      }
+  
+      public void start() {
+          engine.start();
+      }
+  }
+  ```
+_IoC Approach with Dependency Injection_
+  ``` 
+  public class Car {
+      private Engine engine;
+  
+      public Car() {
+          engine = new Engine();
+      }
+  
+      public void start() {
+          engine.start();
+      }
+  }
+  ```
+
+</details>
+
 ### Spring Boot Layers
 <details>
   <summary>Explain</summary>
