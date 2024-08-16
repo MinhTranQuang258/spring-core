@@ -29,9 +29,11 @@ There are several basic techniques to implement IoC: [(_Illustrating images_)](h
 + SUPPORTS: If a transaction exists, then the existing transaction will be used. If there isn't a transaction, it is executed non-transactional.
 + MANDATORY: If there is an active transaction, then it will be used. If there isn't an active transaction, then Spring throws an IllegalTransactionStateException exception.
 + NEVER: Spring throws an exception if there's an active transaction.
+
+**Note**: `@Transactional` will have no effect if used to annotate private, protected, default methods. The proxy generator will ignore them.
 </details>
 
-**NOTE**: `@Transactional` will have no effect if used to annotate private, protected, default methods. The proxy generator will ignore them.
+
 ### Bootstrap phases
 <details>
 <summary>Overview</summary>
