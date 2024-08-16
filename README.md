@@ -81,11 +81,11 @@ Ref: https://stackoverflow.com/questions/65286686/difference-between-classpath-s
 + Isolation:
 + Durability: 
 
-## BeanFactory vs ApplicationContext
+### BeanFactory vs ApplicationContext
 
 + The `BeanFactory` provides the configuration framework and basic functionality
 + The `ApplicationContext` extends the `BeanFactory` and provides more functoions for enterprise-specific functionality.
-## Understanding AOP Proxies
+### Understanding AOP Proxies
 
 <details>
 <summary>Understanding</summary>
@@ -147,41 +147,5 @@ Ref: https://stackoverflow.com/questions/65286686/difference-between-classpath-s
   Ref: https://docs.spring.io/spring-framework/docs/3.2.x/spring-framework-reference/html/aop.html
   
   Ref: https://jenkov.com/tutorials/java-reflection/dynamic-proxies.html
-</details>
-
-## Other 
-
-#### How Java-based Configuration (@Configuration) Works Internally
-<details>
-<summary><b><u>Expand</u></b></summary>
-
-  ```
-  @Configuration
-  public class AppConfig {
-
-      @Bean
-      public ClientService clientService1() {
-          ClientServiceImpl clientService = new ClientServiceImpl();
-          clientService.setClientDao(clientDao()); \\ clientDao bean
-          return clientService;
-      }
-
-      @Bean
-      public ClientService clientService2() {
-          ClientServiceImpl clientService = new ClientServiceImpl();
-          clientService.setClientDao(clientDao()); \\ clientDao bean
-          return clientService;
-      }
-
-      @Bean
-      public ClientDao clientDao() {
-          return new ClientDaoImpl();
-      }
-  }
-  ```
-  
-This is where the magic comes in: <br/>
-All @Configuration classes are subclassed at startup-time with `CGLIB`. The child method checks the container first for any cached (scoped) beans before it creates a new instance.
-
 </details>
 
