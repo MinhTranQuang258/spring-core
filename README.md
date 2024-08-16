@@ -7,6 +7,16 @@ There are several basic techniques to implement IoC: [(_Illustrating images_)](h
 + Template method design pattern
 + ...
 
+In essence, IoC is about transferring control from your code to an external entity, often a container or framework.
+
+<details>
+  <summary>Dependency Injection (DI)</summary>
+  </br>
+
+  
+
+</details>
+
 <details>
   <summary>Example</summary>
   </br>
