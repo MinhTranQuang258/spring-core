@@ -1,5 +1,5 @@
 # Spring Core
-## Inversion of Control
+### Inversion of Control
 [Inversion of control (IoC)](https://en.wikipedia.org/wiki/Inversion_of_control) is a programming _**principle**_. IoC inverts the flow of control as compared to traditional control flow. In IoC, custom-written portions of a computer program receive the control from a generic flow.
 
 There are several basic techniques to implement IoC: [(_Illustrating images_)](https://www.tutorialsteacher.com/Content/images/ioc/ioc-patterns.png)
@@ -7,7 +7,7 @@ There are several basic techniques to implement IoC: [(_Illustrating images_)](h
 + Template method design pattern
 + ...
 
-## Spring Boot Layers
+### Spring Boot Layers
 <details>
   <summary>Explain</summary>
   </br>
@@ -19,9 +19,9 @@ There are several basic techniques to implement IoC: [(_Illustrating images_)](h
 
 </details>
 
-## Bean
-## Transaction Manager
-## Bootstrap phases
+### Bean
+### Transaction Manager
+### Bootstrap phases
 <details>
 <summary>Overview</summary>
 
@@ -29,7 +29,7 @@ There are several basic techniques to implement IoC: [(_Illustrating images_)](h
 
 </details>
 
-## Validation
+### Validation
 
 <details>
   <summary>@Valid vs @Validated</summary>
@@ -37,7 +37,7 @@ There are several basic techniques to implement IoC: [(_Illustrating images_)](h
 
 </details>
 
-## Configuration precedence
+### Configuration precedence
 <details>
 <summary>Overview</summary>
 
