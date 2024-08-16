@@ -1,13 +1,11 @@
 # Spring Core
 ### Inversion of Control
-[Inversion of control (IoC)](https://en.wikipedia.org/wiki/Inversion_of_control) is a programming _**principle**_. IoC inverts the flow of control as compared to traditional control flow. In IoC, custom-written portions of a computer program receive the control from a generic flow.
+[Inversion of control (IoC)](https://en.wikipedia.org/wiki/Inversion_of_control) is a programming _**principle**_. IoC inverts the flow of control as compared to traditional control flow. In essence, IoC is about transferring control from your code to an external entity, often a container or framework.
 
 There are several basic techniques to implement IoC: [(_Illustrating images_)](https://www.tutorialsteacher.com/Content/images/ioc/ioc-patterns.png)
 + Dependency injection
 + Template method design pattern
 + ...
-
-In essence, IoC is about transferring control from your code to an external entity, often a container or framework.
 
 <details>
   <summary>Dependency Injection (DI)</summary>
