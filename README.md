@@ -124,16 +124,16 @@ The key point in IoC is that the `Car` doesn't create the `Engine` itself; it's 
   <summary>Common Validation Annotations</summary>
   </br>
 
-  + @NotNull: Ensures that the annotated field is not null.
-  + @NotEmpty: Ensures that the annotated collection, map, or array is not empty.
-  + @NotBlank: Ensures that the annotated string is not null and the trimmed length is greater than zero.
-  + @Size: Validates that the annotated element’s size is within the specified boundaries.
-  + @Min: Ensures that the annotated element is a number and its value is greater than or equal to the specified minimum.
-  + @Max: Ensures that the annotated element is a number and its value is less than or equal to the specified maximum.
-  + @Pattern: Ensures that the annotated string matches the specified regular expression.
-  + @Email: Validates that the annotated string is a valid email address.
-  + @Past: Ensures that the annotated date is in the past.
-  + @Future: Ensures that the annotated date is in the future.
+  + **@NotNull:** Ensures that the annotated field is not null.
+  + **@NotEmpty:** Ensures that the annotated collection, map, or array is not empty.
+  + **@NotBlank:** Ensures that the annotated string is not null and the trimmed length is greater than zero.
+  + **@Size:** Validates that the annotated element’s size is within the specified boundaries.
+  + **@Min:** Ensures that the annotated element is a number and its value is greater than or equal to the specified minimum.
+  + **@Max:** Ensures that the annotated element is a number and its value is less than or equal to the specified maximum.
+  + **@Pattern:** Ensures that the annotated string matches the specified regular expression.
+  + **@Email:** Validates that the annotated string is a valid email address.
+  + **@Past:** Ensures that the annotated date is in the past.
+  + **@Future:** Ensures that the annotated date is in the future.
 
 </details>
 <details>
