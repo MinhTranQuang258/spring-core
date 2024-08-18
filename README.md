@@ -144,8 +144,68 @@ The key point in IoC is that the `Car` doesn't create the `Engine` itself; it's 
   <summary>@Valid vs @Validated</summary>
   </br>
 
-  
+  `@Valid`: Typically used to validate request bodies.
+  ```
+  public class User {
+    @NotNull
+    @Size(min = 2, max = 30)
+    private String name;
 
+    @NotNull
+    @Email
+    private String email;
+
+    // Getters and setters
+  }
+  ```
+  ```
+  @RestController
+  @RequestMapping("/api/users")
+  public class UserController {
+  
+      @PostMapping
+      public ResponseEntity<User> createUser(@RequestBody @Valid User user) {
+          // Business logic to create a user
+          return ResponseEntity.ok(user);
+      }
+  }
+  ```
+
+  `@Validated`: Often used to validation difference groups based on business.
+  ```
+  public class User {
+    @NotNull(groups = BasicInfo.class)
+    @Size(min = 2, max = 30, groups = BasicInfo.class)
+    private String name;
+
+    @NotNull(groups = BasicInfo.class)
+    @Email(groups = BasicInfo.class)
+    private String email;
+
+    @NotNull(groups = AdvancedInfo.class)
+    @Min(value = 18, groups = AdvancedInfo.class)
+    private Integer age;
+
+    // Getters and setters
+  }
+  ```
+  ```
+  @Service
+  @Validated
+  public class UserService {
+  
+      public User createUser(@Validated(BasicInfo.class) User user) {
+          // Business logic to create a user
+          return user;
+      }
+  
+      public User updateUser(@Validated(AdvancedInfo.class) User user) {
+          // Business logic to update a user
+          return user;
+      }
+  }
+  ```
+In this example, the @Validated annotation is used to validate the User object with specific validation groups (BasicInfo and AdvancedInfo).
 </details>
 
 ### Configuration precedence
