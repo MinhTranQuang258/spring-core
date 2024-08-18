@@ -139,6 +139,37 @@ The key point in IoC is that the `Car` doesn't create the `Engine` itself; it's 
   <summary>Custom Validation Annotations</summary>
   </br>
 
+  ```
+  @Documented
+  @Target(ElementType.FIELD)
+  @Retention(RetentionPolicy.RUNTIME)
+  @Constraint(validatedBy = NumberValidation.class)
+  public @interface IsNumber {
+  
+    String message() default "Invalid number";
+    Class<?>[] groups() default {};  // Include this line
+    Class<? extends Payload>[] payload() default {};  // Include this line
+  }
+  ```
+  _Besides, the `message` attribute, the custom annotation also must have 2 attributes (`groups`, `payload`)._
+  ```
+  public class NumberValidation implements ConstraintValidator<IsNumber, String> {
+
+    @Override
+    public boolean isValid(String value, ConstraintValidatorContext context) {
+      return NumberUtils.isParsable(value);
+    }
+  }
+  ```
+
+  ```
+  @Data
+  public class GoldRequest {
+    @IsNumber
+    private String value;
+  }
+  ```
+
 </details>
 <details>
   <summary>@Valid vs @Validated</summary>
