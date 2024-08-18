@@ -169,7 +169,16 @@ The key point in IoC is that the `Car` doesn't create the `Engine` itself; it's 
     private String value;
   }
   ```
-
+  ```
+  @RestController
+  public class GoldController {
+  
+    @PostMapping("/test")
+    public void test(@RequestBody @Valid GoldRequest goldRequest) {
+      // do something
+    }
+  }
+  ```
 </details>
 <details>
   <summary>@Valid vs @Validated</summary>
