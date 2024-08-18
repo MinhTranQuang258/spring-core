@@ -134,6 +134,10 @@ The key point in IoC is that the `Car` doesn't create the `Engine` itself; it's 
   + **@Email:** Validates that the annotated string is a valid email address.
   + **@Past:** Ensures that the annotated date is in the past.
   + **@Future:** Ensures that the annotated date is in the future.
+</details>
+<details>
+  <summary>Custom Validation Annotations</summary>
+  </br>
 
 </details>
 <details>
