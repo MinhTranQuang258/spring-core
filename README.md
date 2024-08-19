@@ -248,6 +248,8 @@ The key point in IoC is that the `Car` doesn't create the `Engine` itself; it's 
 In this example, the @Validated annotation is used to validate the User object with specific validation groups (BasicInfo and AdvancedInfo).
 </details>
 
+### Spring event
+
 ### Configuration precedence
 <details>
 <summary>Overview</summary>
