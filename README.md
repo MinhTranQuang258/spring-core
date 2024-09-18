@@ -90,7 +90,7 @@ The key point in IoC is that the `Car` doesn't create the `Engine` itself; it's 
 
 ### Spring Boot Layers
 <details>
-  <summary>Explain</summary>
+  <summary>Concepts</summary>
   </br>
   
   1. Presentation Layer – Authentication & Json Translation
