@@ -114,9 +114,8 @@ The key point in IoC is that the `Car` doesn't create the `Engine` itself; it's 
 </details>
 
 ### Transaction Manager
-#### How does @Transactional work ?
 <details>
-<summary><b><u>Propagation</u></b></summary>
+<summary>Propagation</summary>
 
 + REQUIRED: The REQUIRED propagation is default mode.
 + SUPPORTS: If a transaction exists, then the existing transaction will be used. If there isn't a transaction, it is executed non-transactional.
@@ -125,7 +124,6 @@ The key point in IoC is that the `Car` doesn't create the `Engine` itself; it's 
 
 **Note**: `@Transactional` will have no effect if used to annotate private, protected, default methods. The proxy generator will ignore them.
 </details>
-
 
 ### Bootstrap phases
 <details>
