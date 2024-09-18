@@ -279,21 +279,23 @@ In this example, the @Validated annotation is used to validate the User object w
 
 </details>
 <details>
-<summary>Example</summary>
+  <summary>Example</summary>
+  </br>
+  + <b>{specific-location}(s)</b>/<b>{application-name}-{profiles}(s).properties</b>
+  + {specific-location}(s)/{application-name}-{profiles}(s).yml
+  + {specific-location}(s)/{application-name}-{profiles}(s).yaml
+  + {specific-location}(s)/application-{profiles}(s).properties
+  + ...
+  + file:./config/{application-name}-{profiles}(s).properties
+  + ...
+  + file:./config/application-{profiles}(s).properties
+  + ...
+  + {specific-location}(s)/{application-name}.properties
 
-+ <b>{specific-location}(s)</b>/<b>{application-name}-{profiles}(s).properties</b>
-+ {specific-location}(s)/{application-name}-{profiles}(s).yml
-+ {specific-location}(s)/{application-name}-{profiles}(s).yaml
-+ {specific-location}(s)/application-{profiles}(s).properties
-+ ...
-+ file:./config/{application-name}-{profiles}(s).properties
-+ ...
-+ file:./config/application-{profiles}(s).properties
-+ ...
-+ {specific-location}(s)/{application-name}.properties
+  Ref: https://stackoverflow.com/questions/65286686/difference-between-classpath-some-packages-vs-file-some-url-when-configuring-s
 </details>
 
-Ref: https://stackoverflow.com/questions/65286686/difference-between-classpath-some-packages-vs-file-some-url-when-configuring-s
+
 
 ### BeanFactory vs ApplicationContext
 
