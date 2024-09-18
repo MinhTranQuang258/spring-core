@@ -101,6 +101,18 @@ The key point in IoC is that the `Car` doesn't create the `Engine` itself; it's 
 </details>
 
 ### Bean
+
+<details>
+  <summary>Type of beans</summary>
+  </br>
+
+</details>
+<details>
+  <summary>Singleton vs Prototype</summary>
+  </br>
+
+</details>
+
 ### Transaction Manager
 #### How does @Transactional work ?
 <details>
