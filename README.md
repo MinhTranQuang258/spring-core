@@ -295,13 +295,6 @@ In this example, the @Validated annotation is used to validate the User object w
 
 Ref: https://stackoverflow.com/questions/65286686/difference-between-classpath-some-packages-vs-file-some-url-when-configuring-s
 
-#### Transaction characteristics
-
-+ Atomicity: A transaction must be a unit that should either succeed or fail
-+ Consistency: 
-+ Isolation:
-+ Durability: 
-
 ### BeanFactory vs ApplicationContext
 
 + The `BeanFactory` provides the configuration framework and basic functionality
@@ -309,8 +302,8 @@ Ref: https://stackoverflow.com/questions/65286686/difference-between-classpath-s
 ### Understanding AOP Proxies
 
 <details>
-<summary>Understanding</summary>
-
+  <summary>Understanding</summary>
+  </br>
   Let's come up with a sample to clearly understand what a the AOP proxies is
   
   Consider first the scenario have a un-proxied, nothing-special-about-it, straight object reference:
