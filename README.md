@@ -115,8 +115,8 @@ The key point in IoC is that the `Car` doesn't create the `Engine` itself; it's 
 
 ### Transaction Manager
 <details>
-<summary>Propagation</summary>
-</br>
+  <summary>Propagation</summary>
+  </br>
   
 + REQUIRED: The REQUIRED propagation is default mode.
 + SUPPORTS: If a transaction exists, then the existing transaction will be used. If there isn't a transaction, it is executed non-transactional.
@@ -124,6 +124,11 @@ The key point in IoC is that the `Car` doesn't create the `Engine` itself; it's 
 + NEVER: Spring throws an exception if there's an active transaction.
 
 **Note**: `@Transactional` will have no effect if used to annotate private, protected, default methods. The proxy generator will ignore them.
+</details>
+<details>
+  <summary>@Transactional</summary>
+  </br>
+  
 </details>
 
 ### Bootstrap phases
