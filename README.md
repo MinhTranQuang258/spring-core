@@ -116,7 +116,7 @@ The key point in IoC is that the `Car` doesn't create the `Engine` itself; it's 
 ### Transaction Manager
 <details>
 <summary>Propagation</summary>
-
+</br>
 + REQUIRED: The REQUIRED propagation is default mode.
 + SUPPORTS: If a transaction exists, then the existing transaction will be used. If there isn't a transaction, it is executed non-transactional.
 + MANDATORY: If there is an active transaction, then it will be used. If there isn't an active transaction, then Spring throws an IllegalTransactionStateException exception.
