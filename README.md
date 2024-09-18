@@ -273,14 +273,11 @@ In this example, the @Validated annotation is used to validate the User object w
 
 ### Configuration precedence
 <details>
-<summary>Overview</summary>
-
-![](images/configuration_priority.png)
-
-</details>
-<details>
-  <summary>Example</summary>
+  <summary>The configuration precedence</summary>
   </br>
+  
+  ![](images/configuration_priority.png)
+  
   + <b>{specific-location}(s)</b>/<b>{application-name}-{profiles}(s).properties</b>
   + {specific-location}(s)/{application-name}-{profiles}(s).yml
   + {specific-location}(s)/{application-name}-{profiles}(s).yaml
@@ -293,9 +290,8 @@ In this example, the @Validated annotation is used to validate the User object w
   + {specific-location}(s)/{application-name}.properties
 
   Ref: https://stackoverflow.com/questions/65286686/difference-between-classpath-some-packages-vs-file-some-url-when-configuring-s
+
 </details>
-
-
 
 ### BeanFactory vs ApplicationContext
 
