@@ -131,14 +131,6 @@ The key point in IoC is that the `Car` doesn't create the `Engine` itself; it's 
   
 </details>
 
-### Bootstrap phases
-<details>
-<summary>Overview</summary>
-
-![](images/bootstrap.png)
-
-</details>
-
 ### Validation
 
 <details>
@@ -270,6 +262,13 @@ In this example, the @Validated annotation is used to validate the User object w
 </details>
 
 ### Spring event
+
+<details>
+  <summary>Exmaple withh Bootstrap phases</summary>
+  
+  ![](images/bootstrap.png)
+
+</details>
 
 ### Configuration precedence
 <details>
