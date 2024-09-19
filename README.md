@@ -305,6 +305,19 @@ In this example, the @Validated annotation is used to validate the User object w
 
 </details>
 
+### Asynchronous processing
+
+<details>
+  <summary>How @Async work</summary>
+  </br>
+
+</details>
+<details>
+  <summary>Thread pool in @Async</summary>
+  </br>
+
+</details>
+
 ### BeanFactory vs ApplicationContext
 
 + The `BeanFactory` provides the configuration framework and basic functionality
@@ -372,4 +385,5 @@ In this example, the @Validated annotation is used to validate the User object w
   
   Ref: https://jenkov.com/tutorials/java-reflection/dynamic-proxies.html
 </details>
+
 ### Spring Actuator
