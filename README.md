@@ -115,8 +115,17 @@ The key point in IoC is that the `Car` doesn't create the `Engine` itself; it's 
 
 </details>
 <details>
-  <summary>Singleton vs Prototype</summary>
+  <summary>Singleton vs Prototype scope</summary>
   </br>
+
+  
+
+</details>
+<details>
+  <summary>Singleton scope vs Singleton pattern</summary>
+  </br>
+
+  
 
 </details>
 
