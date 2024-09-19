@@ -264,11 +264,20 @@ In this example, the @Validated annotation is used to validate the User object w
 ### Spring event
 
 <details>
+  <summary>Custom Spring event</summary>
+
+</details>
+<details>
+  <summary>Sync & Async in Spring event</summary>
+
+</details>
+<details>
   <summary>Exmaple withh Bootstrap phases</summary>
   
   ![](images/bootstrap.png)
 
 </details>
+
 
 ### Configuration precedence
 <details>
