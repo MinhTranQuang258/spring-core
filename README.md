@@ -372,4 +372,4 @@ In this example, the @Validated annotation is used to validate the User object w
   
   Ref: https://jenkov.com/tutorials/java-reflection/dynamic-proxies.html
 </details>
-
+### Spring Actuator
