@@ -313,6 +313,11 @@ In this example, the @Validated annotation is used to validate the User object w
   </br>
 
 </details>
+<details>
+  <summary>Handle circular dependencies</summary>
+  </br>
+
+</details>
 
 ### Asynchronous processing
 
