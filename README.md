@@ -106,12 +106,12 @@ The key point in IoC is that the `Car` doesn't create the `Engine` itself; it's 
   <summary>Type of beans</summary>
   </br>
 
-  + Singleton: A single instance of the bean is created and shared across the entire application.
-  + Prototype: A new instance of the bean is created every time it is requested.
-  + Request: A single instance of the bean is created and available for each HTTP request.
-  + Session: A single instance of the bean is created and available for each HTTP session.
-  + Application: A single instance of the bean is created and shared across the entire ServletContext.
-  + WebSocket: A single instance of the bean is created and available for each WebSocket session.
+  + **Singleton:** A single instance of the bean is created and shared across the entire application.
+  + **Prototype:** A new instance of the bean is created every time it is requested.
+  + **Request:** A single instance of the bean is created and available for each HTTP request.
+  + **Session:** A single instance of the bean is created and available for each HTTP session.
+  + **Application:** A single instance of the bean is created and shared across the entire ServletContext.
+  + **WebSocket:** A single instance of the bean is created and available for each WebSocket session.
 
 </details>
 <details>
