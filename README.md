@@ -292,6 +292,19 @@ In this example, the @Validated annotation is used to validate the User object w
 
 </details>
 
+### Handle exceptions in Spring
+
+<details>
+  <summary>Using @ControllerAdvice</summary>
+  </br>
+
+</details>
+<details>
+  <summary>Using @ExceptionHandler</summary>
+  </br>
+
+</details>
+
 ### BeanFactory vs ApplicationContext
 
 + The `BeanFactory` provides the configuration framework and basic functionality
