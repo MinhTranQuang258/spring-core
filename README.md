@@ -118,14 +118,98 @@ The key point in IoC is that the `Car` doesn't create the `Engine` itself; it's 
   <summary>Singleton vs Prototype scope</summary>
   </br>
 
+  **Singleton:**
   
+  + A singleton-scoped bean is instantiated only once per Spring IoC container. All requests for that bean will return the same instance.
+  
+  ```
+  @Configuration
+  public class AppConfig {
+      @Bean
+      @Scope("singleton")
+      public MyBean myBean() {
+          return new MyBean();
+      }
+  }
+  ```
+  _Setup singleton bean_
+
+  ```
+  ApplicationContext context = new AnnotationConfigApplicationContext(AppConfig.class);
+  MyBean bean1 = context.getBean(MyBean.class);
+  MyBean bean2 = context.getBean(MyBean.class);
+  
+  System.out.println(bean1 == bean2); // Output: true
+  ```
+
+  **Prototype:**
+  
+  + A prototype-scoped bean means that a new instance of the bean is created every time it is requested from the Spring container.
+
+  ```
+  @Configuration
+  public class AppConfig {
+      @Bean
+      @Scope("prototype")
+      public MyBean myBean() {
+          return new MyBean();
+      }
+  }
+  ```
+
+  ```
+  ApplicationContext context = new AnnotationConfigApplicationContext(AppConfig.class);
+  MyBean bean1 = context.getBean(MyBean.class);
+  MyBean bean2 = context.getBean(MyBean.class);
+  
+  System.out.println(bean1 == bean2); // Output: false
+  ```
+
+  _The scoped bean injection problem._
+
+  By default, Spring beans are singletons. The problem arises when we try inject beans of different scopes. For example, a prototype bean into a singleton.
+
+  
+</details>
+<details>
+  <summary>The scoped bean injection problem</summary>
+  </br>
+  By default, Spring beans are singletons. The problem arises when we try inject beans of different scopes. For example, a prototype bean into a singleton.
+  
+  ```
+  @Configuration
+  public class AppConfig {
+  
+      @Bean
+      @Scope(ConfigurableBeanFactory.SCOPE_PROTOTYPE)
+      public PrototypeBean prototypeBean() {
+          return new PrototypeBean();
+      }
+  
+      @Bean
+      public SingletonBean singletonBean() {
+          return new SingletonBean();
+      }
+  }
+  ```
+
+  ```
+  public class SingletonBean {
+
+    @Autowired
+    private PrototypeBean prototypeBean; //The bean is initialized only once. 
+
+    ...
+  }
+  ```
 
 </details>
 <details>
-  <summary>Singleton scope vs Singleton pattern</summary>
+  <summary>Singleton scope vs pattern</summary>
   </br>
 
-  
+  **Singleton pattern:** There is only once instance of Singleton pattern on the JVM.
+  **Singleton scope:** The Singleton scope only uniquie on the bean name.
 
 </details>
 
