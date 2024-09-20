@@ -464,6 +464,14 @@ In this example, the @Validated annotation is used to validate the User object w
 <details>
   <summary>@ExceptionHandler vs @ControllerAdvice</summary>
   </br>
+
+   `@ExceptionHandler`: 
+   + Handles exceptions within a specific controller.
+   + More suitable for handling exceptions specific to a single controller.
+
+  `@ExceptionHandler`: 
+  + Handles exceptions globally across all controllers.
+  + Handles common exceptions that can occur in multiple controllers.
   
 </details>
 <details>
