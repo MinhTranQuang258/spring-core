@@ -425,15 +425,59 @@ In this example, the @Validated annotation is used to validate the User object w
   <summary>Using @Async</summary>
   </br>
 
+  
+  
 </details>
 <details>
   <summary>How @Async work</summary>
   </br>
 
+  When you annotate a method with @Async, Spring Boot creates a proxy around the method. When an @Async method is called, the caller does not wait for the method to complete. Instead, the method runs asynchronously in the background. By default, Spring Boot uses a `SimpleAsyncTaskExecutor`, but you can configure a custom `TaskExecutor` to manage the threads. 
+
 </details>
 <details>
   <summary>Thread pool in @Async</summary>
   </br>
+
+  
+
+</details>
+
+</details>
+<details>
+  <summary>Return types in @Async</summary>
+  </br>
+
+  + Void: For methods that do not return a value, simply annotate the method with `@Async`.
+  + Return Type: If you need to return a result from an asynchronous method, you can use `Future`, `ListenableFuture` or `CompletableFuture`.
+
+  _Example:_
+
+  ```
+    @Async
+    public CompletableFuture<String> asyncMethodWithCompletableFuture() {
+        return CompletableFuture.supplyAsync(() -> {
+            try {
+                Thread.sleep(5000);
+            } catch (InterruptedException e) {
+                // Handle exception
+            }
+            return "Hello World!";
+        });
+    }
+  ```
+
+  ```
+  public void testAsyncMethod() throws InterruptedException, ExecutionException {
+    Future<String> future = asyncMethodWithCompletableFuture();
+
+    // Do something else while the async method is running
+
+    String result = future.get(); // This will block until the result is available
+    System.out.println("Result from async method: " + result);
+  }
+  ```
+  _Handling the result_
 
 </details>
 
