@@ -422,13 +422,6 @@ In this example, the @Validated annotation is used to validate the User object w
 ### Asynchronous processing
 
 <details>
-  <summary>Using @Async</summary>
-  </br>
-
-  
-  
-</details>
-<details>
   <summary>How @Async work</summary>
   </br>
 
@@ -439,8 +432,27 @@ In this example, the @Validated annotation is used to validate the User object w
   <summary>Thread pool in @Async</summary>
   </br>
 
-  
+  By default, Spring uses a simple thread pool configuration for methods annotated with @Async. If you don’t provide a custom `TaskExecutor`, Spring will use a `SimpleAsyncTaskExecutor`.
+  + **SimpleAsyncTaskExecutor -** This executor does not reuse threads and creates a new thread for each task. It is suitable for simple use cases and testing but not recommended for production.
+  + **ThreadPoolTaskExecutor -** If you define a `ThreadPoolTaskExecutor` bean, Spring will use it instead of the default.
 
+  ```
+  @Configuration
+  @EnableAsync
+  public class AsyncConfig {
+  
+      @Bean(name = "asyncExecutor")
+      public Executor asyncExecutor() {
+          ThreadPoolTaskExecutor executor = new ThreadPoolTaskExecutor();
+          executor.setCorePoolSize(5);
+          executor.setMaxPoolSize(10);
+          executor.setQueueCapacity(500);
+          executor.setThreadNamePrefix("AsyncThread-");
+          executor.initialize();
+          return executor;
+      }
+  }
+  ```
 </details>
 
 </details>
