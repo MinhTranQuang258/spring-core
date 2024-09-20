@@ -375,11 +375,48 @@ In this example, the @Validated annotation is used to validate the User object w
 ### Spring event
 
 <details>
-  <summary>Custom Spring event</summary>
+  <summary>Types of Events</summary>
+
+  + **Built-in Events:** Spring provides several built-in events such as `ContextRefreshedEvent`, `ContextStartedEvent`, `ContextStoppedEvent`, and `ContextClosedEvent`.
+  + **Custom Events:** You can create your own custom events by extending the ApplicationEvent class (for versions before Spring 4.2) or simply using any object as an event (from Spring 4.2 onwards).
 
 </details>
 <details>
+  <summary>Using Spring Events</summary>
+  
+  ```
+  import org.springframework.context.ApplicationEvent;
+
+  public class CustomEvent extends ApplicationEvent {
+      private String message;
+  
+      public CustomEvent(Object source, String message) {
+          super(source);
+          this.message = message;
+      }
+  
+      public String getMessage() {
+          return message;
+      }
+  }
+  ```
+  ```
+  import org.springframework.context.event.EventListener;
+  import org.springframework.stereotype.Component;
+  
+  @Component
+  public class CustomEventListener {
+      @EventListener
+      public void handleCustomEvent(CustomEvent event) {
+          System.out.println("Received custom event - " + event.getMessage());
+      }
+  }
+  ```
+</details>
+<details>
   <summary>Sync & Async in Spring event</summary>
+
+  
 
 </details>
 <details>
