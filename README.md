@@ -411,7 +411,35 @@ In this example, the @Validated annotation is used to validate the User object w
 <details>
   <summary>Using @ExceptionHandler</summary>
   </br>
-
+  
+  Assume, we want to handle a custom exception called `UserNotFoundException`.
+  
+  ```
+  @RestController
+  @RequestMapping("/users")
+  public class UserController {
+  
+      @GetMapping("/{id}")
+      public ResponseEntity<User> getUserById(@PathVariable Long id) {
+          User user = findUserById(id);
+          if (user == null) {
+              throw new UserNotFoundException("User not found with id: " + id);
+          }
+          return new ResponseEntity<>(user, HttpStatus.OK);
+      }
+  
+      // Simulate a method to find a user by ID
+      private User findUserById(Long id) {
+          // Logic to find user by ID
+          return null; // For demonstration, always return null
+      }
+  
+      @ExceptionHandler(UserNotFoundException.class)
+      public ResponseEntity<String> handleUserNotFoundException(UserNotFoundException ex) {
+          return new ResponseEntity<>(ex.getMessage(), HttpStatus.NOT_FOUND);
+      }
+  }
+  ```
 </details>
 <details>
   <summary>@ExceptionHandler vs @ControllerAdvice</summary>
