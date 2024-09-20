@@ -407,6 +407,26 @@ In this example, the @Validated annotation is used to validate the User object w
   <summary>Using @ControllerAdvice</summary>
   </br>
 
+  **Create the Global Exception Handler:**
+
+  ```
+  @ControllerAdvice
+  public class GlobalExceptionHandler {
+  
+      @ExceptionHandler(MyCustomException.class)
+      public ResponseEntity<String> handleMyCustomException(MyCustomException ex) {
+          return new ResponseEntity<>(ex.getMessage(), HttpStatus.BAD_REQUEST);
+      }
+  
+      @ExceptionHandler(Exception.class)
+      public ResponseEntity<String> handleGeneralException(Exception ex) {
+          return new ResponseEntity<>("An error occurred", HttpStatus.INTERNAL_SERVER_ERROR);
+      }
+  }
+  ```
+
+  If have any `MyCustomException` or `Exception` are thrown by application. They will be caught by `GlobalExceptionHandler` to handle exception.
+
 </details>
 <details>
   <summary>Using @ExceptionHandler</summary>
@@ -444,7 +464,7 @@ In this example, the @Validated annotation is used to validate the User object w
 <details>
   <summary>@ExceptionHandler vs @ControllerAdvice</summary>
   </br>
-
+  
 </details>
 <details>
   <summary>Handle circular dependencies</summary>
@@ -488,7 +508,6 @@ In this example, the @Validated annotation is used to validate the User object w
   ```
 </details>
 
-</details>
 <details>
   <summary>Return types in @Async</summary>
   </br>
