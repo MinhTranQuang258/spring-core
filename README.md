@@ -416,10 +416,10 @@ In this example, the @Validated annotation is used to validate the User object w
 <details>
   <summary>Sync & Async in Spring event</summary>
 
-  **Synchronous Events**
+  **Synchronous Events: **
   By default, Spring events are handled synchronously. This means that when an event is published, the publisher thread waits for all event listeners to process the event before continuing.
   
-  **Asynchronous Events**
+  **Asynchronous Events: **
   To handle events asynchronously, you can use the `@Async` annotation. This allows the event listener to process the event in a separate thread, freeing up the publisher thread to continue its work without waiting for the listeners to complete.
 
   ```
