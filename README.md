@@ -414,6 +414,11 @@ In this example, the @Validated annotation is used to validate the User object w
 
 </details>
 <details>
+  <summary>@ExceptionHandler vs @ControllerAdvice</summary>
+  </br>
+
+</details>
+<details>
   <summary>Handle circular dependencies</summary>
   </br>
 
