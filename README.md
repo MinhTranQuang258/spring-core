@@ -475,8 +475,17 @@ In this example, the @Validated annotation is used to validate the User object w
   
 </details>
 <details>
-  <summary>Handle circular dependencies</summary>
+  <summary>Handle circular dependencies exception</summary>
   </br>
+
+  A circular dependency occurs when two or more components depend on each other directly or indirectly, creating a loop. 
+
+  _Example:_ Consider two Spring beans, `BeanA` and `BeanB`, where `BeanA` depends on `BeanB` and `BeanB` depends on `BeanA`
+
+  **Solutions:**
+  + **Redesign:** Often, circular dependencies indicate a design flaw.
+  + **Setter Injection:** Use setter injection instead of constructor injection to break the cycle.
+  + **`@Lazy` Annotation:** Use the `@Lazy` annotation to delay the initialization of one of the beans.
 
 </details>
 
