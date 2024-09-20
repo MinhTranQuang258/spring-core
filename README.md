@@ -208,8 +208,8 @@ The key point in IoC is that the `Car` doesn't create the `Engine` itself; it's 
   <summary>Singleton scope vs pattern</summary>
   </br>
 
-  **Singleton pattern:** There is only once instance of Singleton pattern on the JVM.
-  **Singleton scope:** The Singleton scope only uniquie on the bean name.
+  + **Singleton pattern:** There is only once instance of Singleton pattern on the JVM.
+  + **Singleton scope:** The Singleton scope only uniquie on the bean name.
 
 </details>
 
