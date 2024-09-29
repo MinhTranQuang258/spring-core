@@ -55,8 +55,8 @@ _IoC Approach with Dependency Injection_
   public class Car {
       private Engine engine;
   
-      public Car() {
-          engine = new Engine();
+      public Car(Engine engine) {
+          this.engine = engine;
       }
   
       public void start() {
