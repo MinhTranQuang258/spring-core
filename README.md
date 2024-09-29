@@ -5,12 +5,19 @@
   <summary>Concepts</summary>
   </br>
   
-  [Inversion of control (IoC)](https://en.wikipedia.org/wiki/Inversion_of_control) is a programming _**principle**_. IoC inverts the flow of control as compared to traditional control flow. In essence, IoC is about transferring control from your code to an external entity, often a container or framework.
+  [Inversion of control (IoC)](https://en.wikipedia.org/wiki/Inversion_of_control) is a design principle used in software development to decouple components and increase modularity.
   
   There are several basic techniques to implement IoC: [(_Illustrating images_)](https://www.tutorialsteacher.com/Content/images/ioc/ioc-patterns.png)
   + Dependency injection
   + Template method design pattern
   + ...
+
+</details>
+<details>
+  <summary>Dependency Injection (DI)</summary>
+  </br>
+
+  DI is a specific technique for achieving IoC. It involves providing dependencies to an object rather than creating them within the object itself. It's a common and popular implementation of the IoC principle.   
 
 </details>
 <details>
@@ -21,20 +28,11 @@
   + In the IoC style, dependencies are injected into a class, promoting loose coupling and better testability.
 
 </details>
-
-<details>
-  <summary>Dependency Injection (DI)</summary>
-  </br>
-
-  DI is a specific technique for achieving IoC. It involves providing dependencies to an object rather than creating them within the object itself. It's a common and popular implementation of the IoC principle.   
-
-</details>
-
 <details>
   <summary>Example</summary>
   </br>
   
-  Imagine a car. In a traditional approach, the car would create its own engine. But with IoC, the car doesn't create the engine; it's provided by an external entity (like a car factory). The car simply uses the engine when needed.
+  Imagine a car. In a traditional approach, the Car class is responsible for creating an instance of the Engine class, leading to tight coupling between the `Car` and `Engine` class. But with IoC, the `Car` doesn't create the `Engine`, Car class receives the Engine instance from an external source (like a car factory). IoC reduces coupling and increases modularity.
 
 _Tranditional Approach_
   ```
@@ -50,6 +48,7 @@ _Tranditional Approach_
       }
   }
   ```
+
 _IoC Approach with Dependency Injection_
   ``` 
   public class Car {
