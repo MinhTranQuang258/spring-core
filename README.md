@@ -738,17 +738,25 @@ In this example, the @Validated annotation is used to validate the User object w
   
 </details>
 <details>
-  <summary>Auditing</summary>
-  </br>
-  
-</details>
-<details>
   <summary>Environment Information</summary>
   </br>
+
+  + **Configure Endpoints:** By default, the environment endpoint (`/actuator/env`) is not exposed. You need to configure `management.endpoints.web.exposure.include=env`.
+  + **Security Considerations:** `management.endpoint.env.show-values=WHEN_AUTHORIZED`
   
 </details>
 <details>
   <summary>Loggers</summary>
   </br>
+
+  To configure loggers at runtime in Spring Boot Actuator
+  + **Enable the Loggers Endpoint:**
+  ```
+  management.endpoints.web.exposure.include=loggers
+  management.endpoint.loggers.enabled=true
+  ```
+  + **Access and Configure Loggers:**
+    + **View Log Levels:** To view the current log levels, you can make a `GET` request to `http://localhost:8080/actuator/loggers`. This will return a list of all loggers and their current levels.
+    + **Change Log Levels:** To change the log level of a specific logger, you can make a `POST` request to `http://localhost:8080/actuator/loggers/{loggerName}` with a JSON payload specifying the new level.
   
 </details>
