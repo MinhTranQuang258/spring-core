@@ -732,6 +732,9 @@ In this example, the @Validated annotation is used to validate the User object w
 <details>
   <summary>Metrics</summary>
   </br>
+
+  + **Configure Metrics Exposure:** `management.endpoints.web.exposure.include=health,info,metrics,prometheus`
+  + **Access Metrics:** Once your application is running, you can access the metrics at `http://localhost:8080/actuator/metrics` for general metrics and `http://localhost:8080/actuator/prometheus` for Prometheus-specific metrics.
   
 </details>
 <details>
