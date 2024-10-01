@@ -703,6 +703,30 @@ In this example, the @Validated annotation is used to validate the User object w
 <details>
   <summary>Health Checks</summary>
   </br>
+
+  + **Enable Health Endpoint:** `management.endpoints.web.exposure.include=health`
+  + **Custom Health Indicators:** You can create custom health indicators by implementing the `HealthIndicator` interface.
+
+  ```
+  @Component
+  public class CustomHealthIndicator implements HealthIndicator {
+      @Override
+      public Health health() {
+          // Custom logic to determine health status
+          boolean healthy = checkHealth();
+          if (healthy) {
+              return Health.up().withDetail("Custom Health", "All systems go!").build();
+          } else {
+              return Health.down().withDetail("Custom Health", "Something went wrong!").build();
+          }
+      }
+  
+      private boolean checkHealth() {
+          // Custom health check logic
+          return true;
+      }
+  }
+  ```
   
 </details>
 <details>
