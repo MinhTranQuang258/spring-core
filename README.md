@@ -700,3 +700,28 @@ In this example, the @Validated annotation is used to validate the User object w
 </details>
 
 ### Spring Actuator
+<details>
+  <summary>Health Checks</summary>
+  </br>
+  
+</details>
+<details>
+  <summary>Metrics</summary>
+  </br>
+  
+</details>
+<details>
+  <summary>Auditing</summary>
+  </br>
+  
+</details>
+<details>
+  <summary>Environment Information</summary>
+  </br>
+  
+</details>
+<details>
+  <summary>Loggers</summary>
+  </br>
+  
+</details>
