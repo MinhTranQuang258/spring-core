@@ -103,6 +103,18 @@ The key point in IoC is that the `Car` doesn't create the `Engine` itself; it's 
 ### Bean
 
 <details>
+  <summary>The lifecyle of bean</summary>
+  </br>
+
+  + Spring creates a new instance of the bean class using the constructor.
+  + Spring injects the required dependencies into the bean using dependency injection techniques.
+  + If the bean has a `@PostConstruct` annotation, the annotated method is called.
+  + The bean is now ready to be used
+  + when bean is destroy, If the bean has a @PreDestroy annotation, the annotated method is called.
+  
+</details>
+
+<details>
   <summary>Type of beans</summary>
   </br>
 
