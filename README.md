@@ -12,12 +12,9 @@
   + Template method design pattern
   + ...
 
-</details>
-<details>
-  <summary>Dependency Injection (DI)</summary>
-  </br>
+  **Dependency Injection (DI)**
 
-  DI is a specific technique for achieving IoC. It involves providing dependencies to an object rather than creating them within the object itself. It's a common and popular implementation of the IoC principle.   
+  DI is a specific technique for achieving IoC. It involves providing dependencies to an object rather than creating them within the object itself. It's a common and popular implementation of the IoC principle.
 
 </details>
 <details>
