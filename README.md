@@ -14,7 +14,7 @@
 
   **Dependency Injection (DI)**
 
-  DI is a specific technique for achieving IoC. It involves providing dependencies to an object rather than creating them within the object itself. It's a common and popular implementation of the IoC principle.
+  DI is a specific technique for achieving IoC. It is a software design pattern that promotes loose coupling between classes by passing dependencies. It's a common and popular implementation of the IoC principle.
 
 </details>
 <details>
@@ -29,7 +29,7 @@
   <summary>Example</summary>
   </br>
   
-  Imagine a car. In a traditional approach, the Car class is responsible for creating an instance of the Engine class, leading to tight coupling between the `Car` and `Engine` class. But with IoC, the `Car` doesn't create the `Engine`, Car class receives the Engine instance from an external source (like a car factory). IoC reduces coupling and increases modularity.
+  Imagine a car. In a traditional approach, the Car class is responsible for creating an instance of the Engine class, it leads to tight coupling between the `Car` and `Engine` class. But with IoC, the `Car` doesn't create the `Engine`, Car instance receives the Engine instance from an external source (like a car factory). IoC reduces coupling and increases modularity.
 
 _Tranditional Approach_
   ```
