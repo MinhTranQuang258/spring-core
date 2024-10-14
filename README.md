@@ -644,10 +644,22 @@ In this example, the @Validated annotation is used to validate the User object w
 
 + The `BeanFactory` provides the configuration framework and basic functionality
 + The `ApplicationContext` extends the `BeanFactory` and provides more functoions for enterprise-specific functionality.
-### Understanding AOP Proxies
+### AOP
 
 <details>
-  <summary>Understanding</summary>
+  <summary>What is AOP</summary>
+  </br>
+
+</details>
+
+<details>
+  <summary>Implement a AOP</summary>
+  </br>
+
+</details>
+
+<details>
+  <summary>AOP Proxies</summary>
   </br>
   Let's come up with a sample to clearly understand what a the AOP proxies is
   
