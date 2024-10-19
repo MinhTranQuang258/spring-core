@@ -640,10 +640,23 @@ In this example, the @Validated annotation is used to validate the User object w
 
 </details>
 
-### BeanFactory vs ApplicationContext
+### BeanFactory & ApplicationContext
 
-+ The `BeanFactory` provides the configuration framework and basic functionality
-+ The `ApplicationContext` extends the `BeanFactory` and provides more functoions for enterprise-specific functionality.
+<details>
+  <summary>What is ApplicationContext?</summary>
+  </br>
+
+</details>
+
+<details>
+  <summary>What is the different between BeanFactory and ApplicationContext?</summary>
+  </br>
+
+  + The `BeanFactory` provides the configuration framework and basic functionality
+  + The `ApplicationContext` extends the `BeanFactory` and provides more functoions for enterprise-specific functionality.
+
+</details>
+
 ### AOP
 
 <details>
