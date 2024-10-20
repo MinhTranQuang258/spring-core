@@ -663,11 +663,50 @@ In this example, the @Validated annotation is used to validate the User object w
   <summary>What is AOP</summary>
   </br>
 
+  Aspect-Oriented Programming (AOP) is a way to organize code that helps keep different concerns, like logging or security, separate from your main business logic. Instead of repeating the same code in many places (like adding logging to every method), AOP lets you write that code in one place and apply it automatically across your program.
+
+  
+
 </details>
 
 <details>
   <summary>Implement a AOP</summary>
   </br>
+
+  **Business Service Class (Core Logic)**
+
+  ```
+  public class OrderService {
+      
+      public void createOrder(String item) {
+          System.out.println("Creating order for: " + item);
+      }
+  
+      public void cancelOrder(String orderId) {
+          System.out.println("Cancelling order: " + orderId);
+      }
+  }
+  ```
+  We want to add logging to it using AOP without modifying the business logic.
+
+  **Aspect (Logging Aspect)**
+
+  ```
+  @Before("execution(* com.example.service.OrderService.*(..))")
+  public void logBeforeMethod(JoinPoint joinPoint) {
+      System.out.println("Method called: " + joinPoint.getSignature().getName());
+  }
+  ```
+
+  + **Aspect:** The class `LoggingAspect` is an _aspect_. The `@Aspect` annotation marks it as an aspect.
+  + **Join Point:** A join point is a specific place in the program where an aspect can be applied. In this example, the _join points_ are the methods `createOrder` and `cancelOrder` in the `OrderService` class.
+  + **Advice:** Advice defines what action should be taken and when it should be applied at the _join point_. In this case, The `@Before` annotation indicates before advice, meaning the logging will happen before the execution of the method.
+    + **Before Advice:** Executed before the method call.
+    + **After Advice:** Executed after the method call.
+    + **Around Advice:** Surrounds the method call, allowing code to run before and after the execution of the method.
+    + **After Returning Advice:** Executed after a method successfully returns a result.
+    + **After Throwing Advice:** Executed if the method throws an exception.
+  + **Pointcut:** A pointcut is an expression that defines which join points & advice should be applied to. In this case, the pointcut `execution(* com.example.service.OrderService.*(..))` means "apply this advice to all methods (*) in the OrderService class."
 
 </details>
 
