@@ -665,7 +665,15 @@ In this example, the @Validated annotation is used to validate the User object w
 
   Aspect-Oriented Programming (AOP) is a way to organize code that helps keep different concerns, like logging or security, separate from your main business logic. Instead of repeating the same code in many places (like adding logging to every method), AOP lets you write that code in one place and apply it automatically across your program.
 
-  
+  When to use AOP:
+
+  + **Logging:** Automatically log method calls and events without adding code in every method.
+  + **Security:** Apply authentication and authorization checks across the application.
+  + **Transaction Management:** Handle database transactions consistently (e.g., start, commit, rollback).
+  + **Error Handling:** Centralize exception management and error logging.
+  + **Performance Monitoring:** Track method execution times and performance metrics.
+  + **Caching:** Automatically cache method results for improved performance.
+  + **Data Validation:** Enforce data validation across various methods.
 
 </details>
 
