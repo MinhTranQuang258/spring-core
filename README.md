@@ -115,7 +115,7 @@ The key point in IoC is that the `Car` doesn't create the `Engine` itself; it's 
 </details>
 
 <details>
-  <summary>Type of beans</summary>
+  <summary>Scopes of bean</summary>
   </br>
 
   + **Singleton:** A single instance of the bean is created and shared across the entire application.
