@@ -1,8 +1,8 @@
-# Spring Core
-### Inversion of Control
+# Spring & Spring Boot
+### Spring core
 
 <details>
-  <summary>Concepts</summary>
+  <summary>What is IoC & DI</summary>
   </br>
   
   [Inversion of control (IoC)](https://en.wikipedia.org/wiki/Inversion_of_control) is a design principle used in software development to decouple components and increase modularity.
@@ -15,6 +15,13 @@
   **Dependency Injection (DI)**
 
   DI is a specific technique for achieving IoC. It is a software design pattern that promotes loose coupling between classes by passing dependencies. It's a common and popular implementation of the IoC principle.
+
+</details>
+<details>
+  <summary>What is IoC container in spring</summary>
+  </br>
+
+  An IoC (Inversion of Control) container is a core component that manages the lifecycle, configuration, and dependencies of beans. It uses dependency injection (DI) to achieve Inversion of Control (IoC) to take control over the creation and management of objects.
 
 </details>
 <details>
