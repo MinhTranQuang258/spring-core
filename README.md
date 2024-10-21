@@ -15,7 +15,6 @@
   **Dependency Injection (DI)**
 
   DI is a specific technique for achieving IoC. It is a software design pattern that promotes loose coupling between classes by passing dependencies. It's a common and popular implementation of the IoC principle.
-
 </details>
 <details>
   <summary>What is IoC container in spring</summary>
@@ -62,9 +61,7 @@ _IoC Approach with Dependency Injection_
       }
   }
   ```
-
 </details>
-
 <details>
   <summary>Who is dependency in IoC example</summary>
   </br>
@@ -85,6 +82,23 @@ Consider a `Car` class. It depends on an `Engine` to function. Therefore, the `E
 + The Engine class is the dependency.
 
 The key point in IoC is that the `Car` doesn't create the `Engine` itself; it's provided (_injected_) from an external source.
+
+</details>
+
+<details>
+  <summary>What is ApplicationContext?</summary>
+  </br>
+
+  ApplicationContext represents the Spring IoC (Inversion of Control) container, responsible for managing the lifecycle, configuration, and dependency injection of beans. 
+
+</details>
+
+<details>
+  <summary>What is the different between BeanFactory and ApplicationContext?</summary>
+  </br>
+
+  + The `BeanFactory` provides the configuration framework and basic functionality
+  + The `ApplicationContext` extends the `BeanFactory` and provides more functoions for enterprise-specific functionality.
 
 </details>
 
@@ -110,7 +124,7 @@ The key point in IoC is that the `Car` doesn't create the `Engine` itself; it's 
   + Spring injects the required dependencies into the bean using dependency injection techniques.
   + If the bean has a `@PostConstruct` annotation, the annotated method is called.
   + The bean is now ready to be used
-  + when bean is destroy, If the bean has a @PreDestroy annotation, the annotated method is called.
+  + When bean is destroy, if the bean has a `@PreDestroy` annotation, the annotated method is called.
   
 </details>
 
@@ -640,23 +654,6 @@ In this example, the @Validated annotation is used to validate the User object w
   }
   ```
   _Handling the result_
-
-</details>
-
-### BeanFactory & ApplicationContext
-
-<details>
-  <summary>What is ApplicationContext?</summary>
-  </br>
-
-</details>
-
-<details>
-  <summary>What is the different between BeanFactory and ApplicationContext?</summary>
-  </br>
-
-  + The `BeanFactory` provides the configuration framework and basic functionality
-  + The `ApplicationContext` extends the `BeanFactory` and provides more functoions for enterprise-specific functionality.
 
 </details>
 
