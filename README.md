@@ -291,10 +291,14 @@ The key point in IoC is that the `Car` doesn't create the `Engine` itself; it's 
   <summary>How @Transactional work?</summary>
   </br>
 
-  + You can place the `@Transactional` annotation on a class or method. When applied at the class level, it applies to all public methods of the class.
-  + When a method annotated with `@Transactional` is called, Spring creates a proxy that wraps the method call. This proxy manages the transaction lifecycle, including starting the transaction before the method execution and committing or rolling back the transaction after the method execution.
-  + By default, transactions are rolled back on unchecked exceptions (subclasses of `RuntimeException`) and errors. However, you can specify that a transaction should roll back on checked exceptions.
   + To enable `@Transactional` support, you need to configure `@EnableTransactionManagement`.
+  + You can place the `@Transactional` annotation on a class or method. When applied at the class level, it applies to _all public methods of the class_.
+  + When a method annotated with `@Transactional` is called, Spring creates a proxy that wraps the method call. This proxy manages the transaction lifecycle, including starting the transaction before the method execution and committing or rolling back the transaction after the method execution.
+
+  **Transactions rollback**
+
+  + By default, transactions are rolled back on unchecked exceptions (subclasses of `RuntimeException`) and errors.
+  + However, you can specify that a transaction should rollback on checked exceptions.
 
   ```
   @Transactional(rollbackFor = {SQLException.class, IOException.class})
