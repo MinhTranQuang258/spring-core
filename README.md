@@ -114,6 +114,24 @@ The key point in IoC is that the `Car` doesn't create the `Engine` itself; it's 
 
 </details>
 
+<details>
+  <summary>Advantages of Spring Boot compared to Spring core</summary>
+  </br>
+
+  **Spring Boot**
+  
+  + Spring Boot automatically configures dependencies, configuration.
+  + Spring Boot comes with embedded servers (like Tomcat), so applications can run as standalone JAR
+  + Spring Boot offers starter dependencies (`spring-boot-starter-web`, `spring-boot-starter-data-jpa`) that bundle commonly used dependencies and configurations.
+
+  **Spring**
+  
+  + In Spring, we need to explicitly configure everything (XML or Java configuration).
+  + In Spring, we need to manually deploy your application to an external server.
+  + Spring requires manually managing dependencies and setting up configurations.
+
+</details>
+
 ### Bean
 
 <details>
