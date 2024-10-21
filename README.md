@@ -132,6 +132,24 @@ The key point in IoC is that the `Car` doesn't create the `Engine` itself; it's 
 
 </details>
 
+<details>
+  <summary>Spring boot 2 & 3</summary>
+  </br>
+
+  **Spring boot 2**
+
+  + Supports Java 8 and Java 11.
+  + Uses Micrometer 1.x.
+  + Uses Spring Security 5.x.
+
+  **Spring boot 3**
+
+  + Requires Java 17 or higher.
+  + Leverages Micrometer 2.x, which introduces better support for tracing and monitoring.
+  + Use Spring Security 6, a stronger focus on OAuth2, OpenID Connect, and improved password encoders. 
+  
+</details>
+
 ### Bean
 
 <details>
