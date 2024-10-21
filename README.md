@@ -24,11 +24,6 @@
   + In the traditional style of programming, a class typically creates its own dependencies. This leads to tightly coupled components and makes testing and maintenance difficult.
   + In the IoC style, dependencies are injected into a class, promoting loose coupling and better testability.
 
-</details>
-<details>
-  <summary>Example</summary>
-  </br>
-  
   Imagine a car. In a traditional approach, the Car class is responsible for creating an instance of the Engine class, it leads to tight coupling between the `Car` and `Engine` class. But with IoC, the `Car` doesn't create the `Engine`, Car instance receives the Engine instance from an external source (like a car factory). IoC reduces coupling and increases modularity.
 
 _Tranditional Approach_
@@ -60,6 +55,7 @@ _IoC Approach with Dependency Injection_
       }
   }
   ```
+
 </details>
 
 <details>
