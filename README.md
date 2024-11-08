@@ -150,6 +150,23 @@ The key point in IoC is that the `Car` doesn't create the `Engine` itself; it's 
   
 </details>
 
+<details>
+  <summary>Spring Boot profiles</summary>
+  </br>
+
+  + Profiles allow you to create beans or configurations that are only loaded in specific environments. 
+  + We can create profile-specific properties files in the `src/main/resources` directory. Then we set `spring.profiles.active` to active profiles in the configuration file.
+
+  _Example of Config Loading Priority with Profiles_
+
+  Assume we have the following configuration setup:
+  + `application.properties`: `server.port=8080`
+  + `application-dev.properties`: `server.port=8081`
+
+  If you run the application with `spring.profiles.active=dev` the effective `server.port` will be `8081`.
+
+</details>
+
 ### Bean
 
 <details>
